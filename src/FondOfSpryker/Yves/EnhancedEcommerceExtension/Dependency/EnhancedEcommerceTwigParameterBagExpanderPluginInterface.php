@@ -1,8 +1,6 @@
 <?php
 
-
 namespace FondOfSpryker\Yves\EnhancedEcommerceExtension\Dependency;
-
 
 interface EnhancedEcommerceTwigParameterBagExpanderPluginInterface
 {

@@ -2,21 +2,14 @@
 
 namespace FondOfSpryker\Yves\EnhancedEcommerceExtension\Dependency;
 
-use Twig\Environment;
-
 interface EnhancedEcommerceDataLayerExpanderInterface
 {
     /**
-     * @param Environment $twig
      * @param string $page
      * @param array $twigVariableBag
+     * @param array $dataLayer
      *
-     * @return string
+     * @return array
      */
-    public function expand(Environment $twig, string $page, array $twigVariableBag): string;
-
-    /**
-     * @return string
-     */
-    public function getTemplate(): string;
+    public function expand(string $page, array $twigVariableBag, array $dataLayer): array;
 }

@@ -2,8 +2,6 @@
 
 namespace FondOfSpryker\Yves\EnhancedEcommerceExtension\Dependency;
 
-use Twig\Environment;
-
 interface EnhancedEcommerceDataLayerExpanderPluginInterface
 {
     /**
@@ -15,11 +13,11 @@ interface EnhancedEcommerceDataLayerExpanderPluginInterface
     public function isApplicable(string $pageType, array $twigVariableBag = []): bool;
 
     /**
-     * @param Environment $twig
      * @param string $page
      * @param array $twigVariableBag
+     * @param array $dataLayer
      *
-     * @return string
+     * @return array
      */
-    public function expand(Environment $twig, string $page, array $twigVariableBag): string;
+    public function expand(string $page, array $twigVariableBag, array $dataLayer): array;
 }

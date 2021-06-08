@@ -7,6 +7,14 @@ use Twig\Environment;
 interface EnhancedEcommerceRenderePluginInterface
 {
     /**
+     * @param string $pageType
+     * @param array $twigVariableBag
+     *
+     * @return bool
+     */
+    public function isApplicable(string $pageType, array $twigVariableBag = []): bool;
+
+    /**
      * @param \Twig\Environment $twig
      * @param string $page
      * @param array $twigVariableBag
